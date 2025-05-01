@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Random Cat Fact</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f0f0f0; padding: 2em; }
+        .container { max-width: 600px; margin: auto; background: white; padding: 2em; border-radius: 10px; }
+        h1 { color: #333; }
+        .fact { font-size: 1.2em; margin-top: 1em; }
+        .refresh { margin-top: 1em; display: inline-block; color: blue; text-decoration: underline; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🐱 Random Cat Fact</h1>
+        <div class="fact" th:text="${fact}">Loading...</div>
+        <a class="refresh" th:href="@{/}">Get another fact</a>
+    </div>
+</body>
+</html>
